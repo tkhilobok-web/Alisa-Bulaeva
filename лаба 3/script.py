@@ -1,14 +1,9 @@
-# ============================================
-# Лабораторная работа
-# Автор: Булаева Алиса Ростиславовна
-# Группа: РПИА-025
-# ============================================
-
 import time
 from collections import deque
 
 
-# ---------- 1. Реализация через массив (стек / DFS) ----------
+#  1. Реализация через массив (стек / DFS) 
+
 def count_components_array(grid, M, N, cylinder=False):
     visited = [[False] * N for _ in range(M)]
     components = 0
@@ -42,7 +37,7 @@ def count_components_array(grid, M, N, cylinder=False):
     return components
 
 
-# ---------- 2. Связанный список (очередь / BFS) ----------
+#  2. Связанный список (очередь / BFS) 
 class Node:
     def __init__(self, data):
         self.data = data
@@ -111,7 +106,7 @@ def count_components_linked(grid, M, N, cylinder=False):
     return components
 
 
-# ---------- 3. STL (deque) ----------
+# 3. STL (deque) 
 def count_components_stl(grid, M, N, cylinder=False):
     visited = [[False] * N for _ in range(M)]
     components = 0
@@ -146,7 +141,6 @@ def count_components_stl(grid, M, N, cylinder=False):
     return components
 
 
-# ---------- ТЕСТ ----------
 def main():
     print("====================================")
     print("Автор: Булаева Алиса Ростиславовна")
